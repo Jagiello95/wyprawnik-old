@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: expiration
-        image: /ticketing-dev-299820/expiration
+        image: jagiello95/expiration
         env:
           - name: NATS_CLIENT_ID
             valueFrom:

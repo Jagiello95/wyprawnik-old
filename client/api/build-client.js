@@ -4,7 +4,7 @@ export default ({ req }) => {
     if (typeof window === 'undefined') {
         //server
         return axios.create({
-            baseURL: 'http://www.strangetrail.com/',
+            baseURL: 'http://www.strangetrail.com',
             headers: req.headers        
         });
     } else {

@@ -37,3 +37,13 @@ kubectl delete pod <pod name>
 
 //concurrency issues 
 1) mongo generates random id
+
+///
+Get connection info for our new cluster
+doctl kubernetes cluster kubeconfig save <cluster_name>
+
+// List all contexts
+kubectl config view
+
+// Use a different contexts
+kubectl config use-context <context_name>

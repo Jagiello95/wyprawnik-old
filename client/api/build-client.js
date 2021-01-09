@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-export default ({ req }) => {
+const Client = ({ req }) => {
     if (typeof window === 'undefined') {
         //server
         return axios.create({
-            baseURL: 'http://www.strangetrail.com',
+            baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
             headers: req.headers        
         });
     } else {
@@ -14,3 +14,8 @@ export default ({ req }) => {
         })
     }
 }
+
+export default Client;
+
+// http://ingress-nginx-controller.ingress-nginx.svc.cluster.local
+// http://www.strangetrail.com

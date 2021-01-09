@@ -1,8 +1,9 @@
-import { Router } from 'next/router';
+import { useRouter} from 'next/router';
 import { useState } from 'react'
 import useRequest from '../../hooks/use-request'
 
-export default () => {
+const Signup = () => {
+    const router = useRouter()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,7 +13,7 @@ export default () => {
         body: {
             email, password
         },
-        onSuccess: () => Router.push('/')
+        onSuccess: () => router.push('/')
     })
 
     const onSubmit = async (event) => {
@@ -44,3 +45,5 @@ export default () => {
     </form>
     );
 };
+
+export default Signup;

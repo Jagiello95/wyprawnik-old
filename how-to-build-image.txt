@@ -1,0 +1,39 @@
+1) create Dockerfile
+2) create .dockerignore file (exclude node_modules)
+3) create deployment file
+4) add config in skaffold.yaml
+5) add routing config in ingress service
+
+// docker methods
+
+kubectl get namespace
+kubectl get services
+kubectl get services -n ingress-nginx
+
+//start shell inside image 
+kubectl exec -it <image-name> sh
+
+// create new service
+1) create package.json, install deps
+2) write Dockerfile
+3) create index.ts to run project
+4) build image, push to docker hub
+5) write k8s file for deployment, service
+6) update skaffold.yaml to do file sync
+7) write k8s file for Mongodb deployment, service
+
+//change to common module
+1) rebuild, republish common module ( npm run pub)
+2) npm update <package> inside service
+
+// port forward
+kubectl port-forward <nats pod name> 4222:4222
+
+// multi language services
+change data interfaces to JSON schema in common module or some cross language solution
+
+//delete pod 
+kubectl delete pod <pod name>
+
+//concurrency issues 
+1) mongo generates random id
